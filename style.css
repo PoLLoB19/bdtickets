@@ -1,0 +1,37 @@
+.contact{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 1 span 2;
+    align-items: center;
+    gap: 20px;
+    background-color: #E30B13;
+    color: aliceblue;
+    padding: 2px 23px 2px 23px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+} 
+.contact:hover{
+      background-color: #e42e34;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #E30B13;
+    border: 2px solid #E30B13;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 100vh;
+    background-image: url(./pic/banner-web.png);
+  background-size: cover;
+}
