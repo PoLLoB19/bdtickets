@@ -206,7 +206,7 @@ position: relative;
     position: absolute;
     top: 55%;
     left: 13%;
-  
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .input{
@@ -225,3 +225,7 @@ position: relative;
 .search_button:hover{
 background-color:#F3F2F3 ;
 }
+.div_b{
+    width: 20vw;
+}
+
