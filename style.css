@@ -199,3 +199,29 @@ position: relative;
 .sear:hover{
     background-color: #e42e34;
 }
+.from_searchbox{
+    height: 35vh;
+    width: 19vw;
+    background-color: white;
+    position: absolute;
+    top: 55%;
+    left: 13%;
+  
+  overflow-y: scroll;
+}
+.input{
+ outline: none;
+}
+.searchic{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+.search_button{
+    transition: 0.5s ease;
+    text-align: left;
+    padding: 16px 8px;
+    width: 100%;
+    
+}
+.search_button:hover{
+background-color:#F3F2F3 ;
+}
