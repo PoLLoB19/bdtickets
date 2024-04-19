@@ -331,20 +331,19 @@
           <!-- section ends here -->
         </div>
 
-        <div class="selection  justify-between px-10 pt-12 ">
-            
+        <div class="selection justify-between px-10 pt-12">
           <!-- 
             area started  -->
           <div class="area">
             <div class="from px-10 py-2">
-              <button class="from_button">
+              <button class="from_button outline-none" onclick="boxShowone(), boxhiddentwo()">
                 <p class="text-[13px] text-[#0000008c] text-left">Going from</p>
                 <p class="select">Please select</p>
               </button>
             </div>
             <!-- from div ends -->
             <div class="desti px-10 py-2">
-              <button class="desti_button">
+              <button class="desti_button outline-none" onclick="boxShowtwo(), boxhidden()"  >
                 <p class="text-[13px] text-[#0000008c] text-left">Going to</p>
                 <p class="select_desti">Please select</p>
               </button>
@@ -383,66 +382,178 @@
           </div>
           <!-- date ends here -->
 
-
           <div class="trending flex pb-12 items-center gap-4">
-           <p class="text-[12px] text-[#0000008a]">Trending Searches:</p>
-          
-           <div class="trend_but flex gap-5">
-            <button class="trending_buttons ">
-               <p>Dhaka</p>  <i class="fa-solid fa-arrow-right pt-1"></i> <p>Rajshahi</p>
-            </button>
-            <button class="trending_buttons ">
-                <p>Dhaka</p>  <i class="fa-solid fa-arrow-right pt-1"></i> <p>Barishal</p>
-             </button>
-             <button class="trending_buttons ">
-                <p>Dhaka</p>  <i class="fa-solid fa-arrow-right pt-1"></i> <p>Cox's Bazar</p>
-             </button>
-             <button class="trending_buttons ">
-                <p>Dhaka</p>  <i class="fa-solid fa-arrow-right pt-1"></i> <p>Chittagong</p>
-             </button>
-             <button class="trending_buttons ">
-                <p>Dhaka</p>  <i class="fa-solid fa-arrow-right pt-1"></i> <p>Chapainawabganj</p>
-             </button>
+            <p class="text-[12px] text-[#0000008a]">Trending Searches:</p>
 
-           </div>
-
-
+            <div class="trend_but flex gap-5">
+              <button class="trending_buttons">
+                <p>Dhaka</p>
+                <i class="fa-solid fa-arrow-right pt-1"></i>
+                <p>Rajshahi</p>
+              </button>
+              <button class="trending_buttons">
+                <p>Dhaka</p>
+                <i class="fa-solid fa-arrow-right pt-1"></i>
+                <p>Barishal</p>
+              </button>
+              <button class="trending_buttons">
+                <p>Dhaka</p>
+                <i class="fa-solid fa-arrow-right pt-1"></i>
+                <p>Cox's Bazar</p>
+              </button>
+              <button class="trending_buttons">
+                <p>Dhaka</p>
+                <i class="fa-solid fa-arrow-right pt-1"></i>
+                <p>Chittagong</p>
+              </button>
+              <button class="trending_buttons">
+                <p>Dhaka</p>
+                <i class="fa-solid fa-arrow-right pt-1"></i>
+                <p>Chapainawabganj</p>
+              </button>
+            </div>
           </div>
           <!-- trending div ends here -->
 
-        <div class="sear">
+          <div class="sear">
             <button class="search">Search Bus</button>
-              </div>
+          </div>
+        </div>
+
+        <div class="from_searchbox">
+          <div class="searchic flex items-center justify-between">
+            <div class="tip">
+              <button>
+                <i class="fa-solid fa-magnifying-glass text-[12px]"></i>
+              </button>
+              <input
+                type="text"
+                class="input text-[15px] py-2 pr-4 pl-1"
+                name=""
+                id=""
+                placeholder="search by city"
+              />
+            </div>
+
+            <button class="cross" onclick="boxhidden(), faka()">
+              <i class="fa-solid fa-x text-[12px]"></i>
+            </button>
+          </div>
+
+          <div class="search_butttons">
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Dhaka
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Rajshahi
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Chittagong
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Barishal
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Chapainawabganj
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Khulna
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Cox's Bazar
+            </button>
+            <button
+              class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Rangpur
+            </button>
+          </div>
         </div>
 
 
-        <div class="from_searchbox ">
-            <div class="searchic flex items-center justify-between ">
-                <div class="tip"><button><i class="fa-solid fa-magnifying-glass text-[12px]"></i></button> 
-                <input type="text" class="input text-[15px] py-2 pr-4 pl-1 " name="" id="" placeholder="search by city"></div>
-               
-               <button class="cross"><i class="fa-solid fa-x text-[12px]"></i></button> 
+        <div class="to_searchbox">
+          <div class="searchic flex items-center justify-between">
+            <div class="tip">
+              <button>
+                <i class="fa-solid fa-magnifying-glass text-[12px]"></i>
+              </button>
+              <input
+                type="text"
+                class="input_to text-[15px] py-2 pr-4 pl-1 outline-none"
+                name=""
+                id=""
+                placeholder="search by city"
+              />
             </div>
 
-            <div class="search_butttons">
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Dhaka</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Rajshahi</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Chittagong</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Barishal</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Chapainawabganj</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Khulna</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Cox's Bazar</button>
-              <button class="search_button w-full text-left px-2 py-4 hover:bg-[#F3F2F3]">Rangpur</button>
+            <button class="cross" onclick=" boxhiddentwo(), faka()">
+              <i class="fa-solid fa-x text-[12px]"></i>
+            </button>
+          </div>
 
-            </div>
+          <div class="search_butttons_to">
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Dhaka
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Rajshahi
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Chittagong
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Barishal
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Chapainawabganj
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Khulna
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Cox's Bazar
+            </button>
+            <button
+              class="search_button_to w-full text-left px-2 py-4 hover:bg-[#F3F2F3]"
+            >
+              Rangpur
+            </button>
+          </div>
         </div>
-
-         </div>
-        <!-- content ends here -->
       </div>
- 
-       <!-- header last -->
+      <!-- content ends here -->
     </div>
+
+    <!-- header last -->
+
     <script src="script.js"></script>
   </body>
 </html>
