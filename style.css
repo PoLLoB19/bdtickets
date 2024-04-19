@@ -270,3 +270,14 @@ background-color:#F3F2F3 ;
 .search_button_to:hover{
     background-color:#F3F2F3 ;
     }
+
+ .datet{
+  outline: none;
+  cursor: pointer;
+ display: none;
+  transition: 0.5 ease;
+ }   
+
+ .dat{
+   display: block;
+ }

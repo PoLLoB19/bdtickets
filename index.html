@@ -17,7 +17,10 @@
   </head>
   <body>
     <div class="header w-full">
-      <div class="menu flex items-center justify-center pl-4 py-3">
+      <div
+        class="menu flex items-center justify-center pl-4 py-3"
+        onclick="boxhidden(), boxhiddentwo(),hidedate()"
+      >
         <img src="./pic/logo-new-2.png" alt="" class="h-12 cursor-pointer" />
         <div class="icons mr-14 flex">
           <button
@@ -213,7 +216,7 @@
       <!-- hero section start -->
 
       <div class="content">
-        <div class="section">
+        <div class="section" onclick="boxhidden(), boxhidden(),hidedate()">
           <div class="items">
             <button class="items_ic firsti">
               <svg
@@ -331,19 +334,25 @@
           <!-- section ends here -->
         </div>
 
-        <div class="selection justify-between px-10 pt-12">
+        <div class="selection justify-between px-10 pt-12" >
           <!-- 
             area started  -->
           <div class="area">
             <div class="from px-10 py-2">
-              <button class="from_button outline-none" onclick="boxShowone(), boxhiddentwo()">
+              <button
+                class="from_button outline-none"
+                onclick="boxShowone(), boxhiddentwo(),hidedate()"
+              >
                 <p class="text-[13px] text-[#0000008c] text-left">Going from</p>
                 <p class="select">Please select</p>
               </button>
             </div>
             <!-- from div ends -->
             <div class="desti px-10 py-2">
-              <button class="desti_button outline-none" onclick="boxShowtwo(), boxhidden()"  >
+              <button
+                class="desti_button outline-none"
+                onclick="boxShowtwo(), boxhidden(),hidedate()"
+              >
                 <p class="text-[13px] text-[#0000008c] text-left">Going to</p>
                 <p class="select_desti">Please select</p>
               </button>
@@ -351,7 +360,7 @@
             <!-- desti div ends -->
             <!-- button started  -->
             <div class="img_but">
-              <button class="image" onclick="swit()">
+              <button class="image img_b" onclick="swit()">
                 <img src="./pic/swap-red-light.svg" alt="" />
               </button>
             </div>
@@ -362,20 +371,25 @@
           <div class="date">
             <div class="tarikh px-10 py-2">
               <button class="tarikh_button">
-                <p class="text-[13px] text-[#0000008c] text-left">
+                <p
+                  class="text-[13px] text-[#0000008c] text-left flex items-center"
+                >
                   Journey Date
+                  <i class="fa-solid fa-angle-down pl-2 pt-1"></i>
                 </p>
-                <p class="select">Please select</p>
+                <p class="select pr-8">Select Date</p>
               </button>
+
+              <div class="calender">
+                <input type="date" name="" id="" class="datet absolute" />
+              </div>
             </div>
 
             <!-- tarikh ends here -->
             <div class="return px-10 py-2">
-              <button class="return_button cursor-not-allowed">
-                <p class="text-[13px] text-[#0000008c] text-left">
-                  Return date
-                </p>
-                <p class="select_desti">Please select</p>
+              <button class="return_button cursor-not-allowed text-[#00000042]">
+                <p class="text-[13px] text-left">Return date</p>
+                <p class="select_desti">Select Date</p>
               </button>
             </div>
             <!-- return ends herre -->
@@ -483,7 +497,6 @@
             </button>
           </div>
         </div>
-
 
         <div class="to_searchbox">
           <div class="searchicto flex items-center justify-between">

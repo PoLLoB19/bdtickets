@@ -60,6 +60,7 @@ function show(item) {
   input.value = item.innerText;
   fromBox.innerHTML = item.innerText;
   boxhidden();
+  hidedate()
 }
 
 // to get similar words for to section for to going section
@@ -104,6 +105,7 @@ function show_to(item) {
   input_to.value = item.innerText;
   toBox.innerHTML = item.innerText;
   boxhiddentwo();
+  hidedate()
 }
 
 // function for each location button
@@ -113,6 +115,7 @@ button.forEach((items) => {
     input.value = items.innerText;
     reset();
     boxhidden();
+    hidedate()
     items.style.backgroundColor = "#F8C2C4";
   });
 });
@@ -123,6 +126,7 @@ to_button.forEach((items) => {
     input_to.value = items.innerText;
     reseto();
     boxhiddentwo();
+    hidedate()
     items.style.backgroundColor = "#F8C2C4";
   });
 });
@@ -165,14 +169,46 @@ function swit() {
     fromBox.innerHTML = input.value;
     toBox.innerHTML = input_to.value;
   }
+
+ 
 }
 
 
 trend.forEach((item)=>{
   item.addEventListener("click",()=>{
-    fromBox.innerHTML=item.parentElement.querySelector("p").innerHTML;
-    toBox.innerHTML=item.parentElement.querySelector(".second").innerHTML;
-    console.log(12)
+    fromBox.innerHTML=item.querySelector(".first").innerHTML;
+    toBox.innerHTML=item.querySelector(".second").innerHTML;
+   input.value=item.querySelector(".first").innerHTML;
+   input_to.value=item.querySelector(".second").innerHTML;
+    console.log(12);
+
+
+   
   })
 
 })
+
+document.querySelector(".tarikh_button").addEventListener("click",()=>{
+   document.querySelector(".datet").classList.add("dat");
+
+  boxhidden();
+  boxhiddentwo();
+})
+
+document.querySelector(".return_button").addEventListener("click",()=>{
+  document.querySelector(".datet").classList.add("dat");
+  boxhidden();
+  boxhiddentwo();
+
+
+})
+document.querySelector(".datet").addEventListener("click",()=>{
+let date =document.querySelector(".datet").innerHTML;
+  document.querySelector(".tarikh_button").querySelector('.select').innerHTML = date;
+
+
+})
+
+function hidedate(){
+  document.querySelector(".datet").classList.remove("dat");
+}
