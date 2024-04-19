@@ -17,15 +17,16 @@ const input = document.querySelector(".input");
 const push = document.querySelectorAll("#diba");
 const searchDiv = document.querySelector(".from_searchbox");
 
-const toBox =document.querySelector('.select_desti');
+const toBox = document.querySelector(".select_desti");
 const twoin = document.querySelector(".desti_button");
 
- const to_button=document.querySelectorAll(".search_button_to")
+const to_button = document.querySelectorAll(".search_button_to");
 
 const Box_to = document.querySelector(".search_butttons_to");
 
 const input_to = document.querySelector(".input_to");
 
+const trend =document.querySelectorAll(".trending_buttons")
 
 // function starats while typing
 
@@ -38,15 +39,12 @@ input.onkeyup = function () {
     result = Data.filter((words) => {
       return words.toLowerCase().includes(inputit.toLowerCase());
     });
+    console.log(result);
   }
 
   // show the element div
 
   display(result);
-
-  if (!result.length) {
-  
-  }
 };
 // this shows the filter reault
 
@@ -58,36 +56,36 @@ function display(result) {
   Box.innerHTML = alone.join("");
 }
 
+function show(item) {
+  input.value = item.innerText;
+  fromBox.innerHTML = item.innerText;
+  boxhidden();
+}
 
-  // to get similar words for to section for to going section
+// to get similar words for to section for to going section
 
-  input_to.onkeyup = function () {
-    let result = [];
-    let inputit = input_to.value;
-  if (inputit) {
-    result = Data.filter((words) => {
-      return words.toLowerCase().includes(inputit.toLowerCase());
+input_to.onkeyup = function () {
+  let content = [];
+  let inputito = input_to.value;
+  if (inputito) {
+    content = Data.filter((word) => {
+      return word.toLowerCase().includes(inputito.toLowerCase());
     });
   }
 
   // show the element div
 
-  display(result);
-
-  if (!result.length) {
-  
-  }
+  displ(content);
 };
 // this shows the filter reault
 
-function display(result) {
-  let alone = result.map((items) => {
-    return `<button onclick='show_to(this)' class='search_button div_b' id="diba">${items}</button>`;
+function displ(content) {
+  let aloneh = content.map((item) => {
+    return `<button onclick='show_to(this)' class='search_button_to div_b' id="diba">${item}</button>`;
   });
 
-  Box_to.innerHTML = alone.join("");
+  Box_to.innerHTML = aloneh.join("");
 }
-
 
 const reset = () => {
   button.forEach((items) => {
@@ -102,17 +100,10 @@ const reseto = () => {
 };
 // this for user input location change
 
-
 function show_to(item) {
   input_to.value = item.innerText;
   toBox.innerHTML = item.innerText;
   boxhiddentwo();
-}
-
-function show(item) {
-  input.value = item.innerText;
-  fromBox.innerHTML = item.innerText;
-  boxhidden();
 }
 
 // function for each location button
@@ -150,14 +141,11 @@ function boxhidden() {
 }
 
 function boxShowtwo() {
- document.querySelector(".to_searchbox").classList.toggle("search_hidet");
-
+  document.querySelector(".to_searchbox").classList.toggle("search_hidet");
 }
 function boxhiddentwo() {
   document.querySelector(".to_searchbox").classList.remove("search_hidet");
- 
- }
-
+}
 
 // for  the cross icon to hide element box
 function faka() {
@@ -165,3 +153,26 @@ function faka() {
   fromBox.innerHTML = "Please select";
   reset();
 }
+function swit() {
+  if (fromBox.innerHTML !== input_to.value && toBox.innerHTML !== input.value) {
+    fromBox.innerHTML = input_to.value;
+    toBox.innerHTML = input.value;
+    console.log(1);
+  } else if (
+    fromBox.innerHTML === input_to.value &&
+    toBox.innerHTML === input.value
+  ) {
+    fromBox.innerHTML = input.value;
+    toBox.innerHTML = input_to.value;
+  }
+}
+
+
+trend.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    fromBox.innerHTML=item.parentElement.querySelector("p").innerHTML;
+    toBox.innerHTML=item.parentElement.querySelector(".second").innerHTML;
+    console.log(12)
+  })
+
+})
