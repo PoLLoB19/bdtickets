@@ -9,6 +9,7 @@ let Data = [
   "Rangpur",
 ];
 
+let BusSearch = document.querySelector(".search");
 const search = document.querySelector(".tip");
 const Box = document.querySelector(".search_butttons");
 const button = document.querySelectorAll(".search_button");
@@ -26,7 +27,56 @@ const Box_to = document.querySelector(".search_butttons_to");
 
 const input_to = document.querySelector(".input_to");
 
-const trend =document.querySelectorAll(".trending_buttons")
+const trend = document.querySelectorAll(".trending_buttons");
+const fromOut = document.querySelector(".fromout");
+const toOut = document.querySelector(".toout ");
+const dateOut = document.querySelector(".dateout");
+const cost = document.querySelector(".cost");
+const fromOutto = document.querySelector(".fromouto");
+const toOutto = document.querySelector(".toouto ");
+const dateOutto = document.querySelector(".dateouto");
+const costto = document.querySelector(".costo");
+const datebox = document.querySelector(".selectdate");
+const buslist = document.querySelector(".buslist");
+
+BusSearch.addEventListener("click", () => {
+
+document.querySelector('.loader').classList.add('load');
+
+setTimeout(() => {
+  document.querySelector('.loader').classList.remove('load');
+
+  buslist.classList.toggle("block");
+  buslist.classList.remove("hidden");
+  fromOut.innerHTML = fromBox.innerText;
+  toOut.innerHTML = toBox.innerText;
+  let f = document.querySelector(".datet").value;
+  fromOutto.innerHTML = fromBox.innerText;
+  toOutto.innerHTML = toBox.innerText;
+
+  dateOut.innerHTML = f;
+  dateOutto.innerHTML = f;
+  if (fromBox.innerHTML === "Dhaka") {
+    cost.innerHTML = 1100;
+    costto.innerHTML = 1300;
+  } else {
+    cost.innerHTML = 1200;
+    costto.innerHTML = 1500;
+  }
+
+}, 3000);
+
+  
+  // document.querySelector('.items').classList.add('itemsjh');
+  // document.querySelector('.items').classList.add('itemsjh');
+  // document.querySelector('.items').classList.remove('items');
+});
+
+// else{
+//   BusSearch.addEventListener('click',()=>{
+
+//   })
+// }
 
 // function starats while typing
 
@@ -60,7 +110,7 @@ function show(item) {
   input.value = item.innerText;
   fromBox.innerHTML = item.innerText;
   boxhidden();
-  hidedate()
+  hidedate();
 }
 
 // to get similar words for to section for to going section
@@ -105,7 +155,7 @@ function show_to(item) {
   input_to.value = item.innerText;
   toBox.innerHTML = item.innerText;
   boxhiddentwo();
-  hidedate()
+  hidedate();
 }
 
 // function for each location button
@@ -115,7 +165,7 @@ button.forEach((items) => {
     input.value = items.innerText;
     reset();
     boxhidden();
-    hidedate()
+    hidedate();
     items.style.backgroundColor = "#F8C2C4";
   });
 });
@@ -126,7 +176,7 @@ to_button.forEach((items) => {
     input_to.value = items.innerText;
     reseto();
     boxhiddentwo();
-    hidedate()
+    hidedate();
     items.style.backgroundColor = "#F8C2C4";
   });
 });
@@ -169,46 +219,36 @@ function swit() {
     fromBox.innerHTML = input.value;
     toBox.innerHTML = input_to.value;
   }
-
- 
 }
 
-
-trend.forEach((item)=>{
-  item.addEventListener("click",()=>{
-    fromBox.innerHTML=item.querySelector(".first").innerHTML;
-    toBox.innerHTML=item.querySelector(".second").innerHTML;
-   input.value=item.querySelector(".first").innerHTML;
-   input_to.value=item.querySelector(".second").innerHTML;
+trend.forEach((item) => {
+  item.addEventListener("click", () => {
+    fromBox.innerHTML = item.querySelector(".first").innerHTML;
+    toBox.innerHTML = item.querySelector(".second").innerHTML;
+    input.value = item.querySelector(".first").innerHTML;
+    input_to.value = item.querySelector(".second").innerHTML;
     console.log(12);
+  });
+});
 
-
-   
-  })
-
-})
-
-document.querySelector(".tarikh_button").addEventListener("click",()=>{
-   document.querySelector(".datet").classList.add("dat");
+document.querySelector(".tarikh_button").addEventListener("click", () => {
+  document.querySelector(".datet").classList.add("dat");
 
   boxhidden();
   boxhiddentwo();
-})
+});
 
-document.querySelector(".return_button").addEventListener("click",()=>{
+document.querySelector(".return_button").addEventListener("click", () => {
   document.querySelector(".datet").classList.add("dat");
   boxhidden();
   boxhiddentwo();
+});
+document.querySelector(".datet").addEventListener("click", () => {
+  let date = document.querySelector(".datet").innerHTML;
+  document.querySelector(".tarikh_button").querySelector(".select").innerHTML =
+    date;
+});
 
-
-})
-document.querySelector(".datet").addEventListener("click",()=>{
-let date =document.querySelector(".datet").innerHTML;
-  document.querySelector(".tarikh_button").querySelector('.select').innerHTML = date;
-
-
-})
-
-function hidedate(){
+function hidedate() {
   document.querySelector(".datet").classList.remove("dat");
 }

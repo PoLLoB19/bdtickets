@@ -16,6 +16,8 @@
     />
   </head>
   <body class="relative">
+
+    <div class="loader"></div>
     <div
       class="menu flex items-center justify-between lg:justify-center lg:gap-4 px-6  lg:px-4 py-3 lg:fixed top-0 w-full bg-transparent lg:bg-[#faebd760]"
       onclick="boxhidden(), boxhiddentwo(),hidedate()"
@@ -226,7 +228,7 @@
 <div class="header">
       <div class="content w-full h-[10vh] sm:h-[35vh] lg:h-[60vh] mt-40 ">
         <div class="section w-[100vw] lg:w-[35vw] bg-transparent lg:bg-white" onclick="boxhidden(), boxhidden(),hidedate()">
-          <div class="items sm:left-[25%] sm:top-[40%]">
+          <div class="items sm:left-[25%] sm:top-[40%]  md:top-[45%]">
             <button class="items_ic firsti ">
               <svg
                 width="23"
@@ -365,8 +367,7 @@
             <div class="desti px-10 py-2">
               <button
                 class="desti_button outline-none"
-                onclick="boxShowtwo(), boxhidden(),hidedate()"
-              >
+                onclick="boxShowtwo(), boxhidden(),hidedate()">
                 <p class="text-[13px] text-[#0000008c] text-left">Going to</p>
                 <p class="select_desti">Please select</p>
               </button>
@@ -391,7 +392,7 @@
                   Journey Date
                   <i class="fa-solid fa-angle-down pl-2 pt-1"></i>
                 </p>
-                <p class="select pr-8">Select Date</p>
+                <p class="selectdate select pr-8">Select Date</p>
               </button>
 
               <div class="calender">
@@ -444,7 +445,8 @@
           <!-- trending div ends here -->
 
           <div class="sear sm:left-[40%]">
-            <button class="search">Search Bus</button>
+            <button class="search"  >
+              Search Bus</button>
           </div>
         </div>
 
@@ -581,6 +583,63 @@
    
 
     <!-- header last -->
+  </div>
+
+  <div class="buslist bg-white hidden">
+    <div class="text-center m-auto text-[30px] bg-[#d0bad8] text-[#ffffff] font-serif p-2 ">Avalibale Busses :</div>
+
+<div class="busses m-auto pb-4">
+   
+    <div class="busBox w-[90vw] lg:w-[60vw] border-[1px] border-[#E42E34] m-auto mt-12 rounded-[7px] p-4 ">
+      <p class="text-[#E42E34] font-mono text-center pb-4 text-[25px]">Hanif Paribahan</p>
+        <div class="flex justify-around">
+      <div class="froombox text-[#E42E34] font-mono text-[15px] w-[13vw] text-ce">
+        <span class="">From</span>
+        <p class="fromout border-none w-f">Your Place</p>
+      </div>
+      <div class="tommbox text-[#E42E34] font-mono text-[15px] w-[13vw]">
+        <span class="">To</span>
+        <p class="toout border-none ">Your Place</p>
+      </div>
+      <div class="datebox text-[#E42E34] font-mono text-[15px] w-[13vw]">
+        <span class="">Journey Date</span>
+        <p class="dateout border-none ">Your Date</p>
+      </div>
+ 
+    </div>
+
+    <div class="price flex   text-[#E42E34] font-mono text-[15px text-center justify-center mt-4 costbox">
+        <h1 class="text-ce">Cost :</h1>
+        <p class="cost">Total Cost</p>
+    </div>
+    </div>
+
+    <div class="busBox w-[90vw] lg:w-[60vw] border-[1px] border-[#E42E34] m-auto mt-12 rounded-[7px] p-4 ">
+      <p class="text-[#E42E34] font-mono text-center pb-4 text-[25px]">Desh Travels</p>
+        <div class="flex justify-around">
+      <div class="froombox text-[#E42E34] font-mono text-[15px] w-[13vw] text-ce">
+        <span class="">From</span>
+        <p class="fromouto border-none w-f">Your Place</p>
+      </div>
+      <div class="tommbox text-[#E42E34] font-mono text-[15px] w-[13vw]">
+        <span class="">To</span>
+        <p class="toouto border-none ">Your Place</p>
+      </div>
+      <div class="datebox text-[#E42E34] font-mono text-[15px] w-[13vw]">
+        <span class="">Journey Date</span>
+        <p class="dateouto border-none ">Your Date</p>
+      </div>
+ 
+    </div>
+
+    <div class="price flex   text-[#E42E34] font-mono text-[15px text-center justify-center mt-4 costbox">
+        <h1 class="text-ce">Cost :</h1>
+        <p class="costo">Total Cost</p>
+    </div>
+    </div>
+
+
+</div>
   </div>
     <script src="script.js"></script>
   </body>
