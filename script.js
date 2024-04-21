@@ -42,13 +42,13 @@ const buslist = document.querySelector(".buslist");
 BusSearch.addEventListener("click", () => {
 
 if(input.value==0&& input_to.value==0){
-  window.alert('pleasse select Destination')
+  window.alert('Please Select Destination')
 }
 
 
 else{
     if(document.querySelector(".datet").value==0){
- window.alert('pleasse select a date')
+ window.alert('Please select a date')
   }
 
   else{
