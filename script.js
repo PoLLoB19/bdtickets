@@ -41,7 +41,20 @@ const buslist = document.querySelector(".buslist");
 
 BusSearch.addEventListener("click", () => {
 
-document.querySelector('.loader').classList.add('load');
+if(input.value==0&& input_to.value==0){
+  window.alert('pleasse select Destination')
+}
+
+
+else{
+    if(document.querySelector(".datet").value==0){
+ window.alert('pleasse select a date')
+  }
+
+  else{
+    document.querySelector('.loader').classList.add('load');
+searchDiv.classList.add("showBox");
+document.querySelector(".to_searchbox").classList.add("showBox");
 
 setTimeout(() => {
   document.querySelector('.loader').classList.remove('load');
@@ -86,6 +99,10 @@ else{
   document.querySelector('.items').classList.add('itemTop');
 
 }, 3000);
+
+  }
+
+}
 
   
  

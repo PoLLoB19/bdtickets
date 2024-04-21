@@ -159,7 +159,7 @@ body{
     width: 19vw;
     background-color: white;
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 13%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -173,7 +173,7 @@ display: none;
     width: 19vw;
     background-color: white;
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 32%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -181,6 +181,7 @@ display: none;
 display: none;
  z-index: -20;
 }
+
 
 
 .tarikh {
@@ -205,6 +206,12 @@ display: none;
     left: 45%;
     bottom: -10%;
 }
+
+.showBox{
+    top: 30%;
+    z-index: 10;
+    height: 65vh;
+};
 
 }
 @media screen and (max-width:1024px) {
@@ -240,6 +247,8 @@ display: none;
      z-index: -10;
     }
 
+    
+
     .to_searchbox{
         height: 35vh;
         width: 47vw;
@@ -253,6 +262,13 @@ display: none;
     display: none;
      z-index: -10;
     }
+
+   .showBoxt{
+        top: 30%;
+        z-index: 10;
+        height: 65vh;
+    }
+
 
 .items{
     display: flex;
@@ -358,7 +374,32 @@ left: 15%;
     color: azure;
 }
 
+@media screen and (max-width:630px) {
+    .showBox{
+        top: 30%;
+        z-index: 10;
+        height: 65vh;
+    };
+ 
+}
 
+
+@media screen and (max-width:768px) {
+    .showBox{
+        top: 32%;
+        z-index: 10;
+        height: 65vh;
+    };
+ 
+}
+@media screen and (max-width:1024px) {
+    .showBox{
+        top: 30%;
+        z-index: 10;
+        height: 65vh;
+    };
+ 
+}
 
 
 .img_but{
