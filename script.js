@@ -48,7 +48,9 @@ setTimeout(() => {
 
   buslist.classList.toggle("block");
   buslist.classList.remove("hidden");
-  fromOut.innerHTML = fromBox.innerText;
+
+  if(fromBox.innerHTML!=toBox.innerHTML){
+ fromOut.innerHTML = fromBox.innerText;
   toOut.innerHTML = toBox.innerText;
   let f = document.querySelector(".datet").value;
   fromOutto.innerHTML = fromBox.innerText;
@@ -56,6 +58,22 @@ setTimeout(() => {
 
   dateOut.innerHTML = f;
   dateOutto.innerHTML = f;
+  }
+ else if(fromBox.innerHTML!=toBox.innerHTML &&  datebox.innerHTML != document.querySelector(".datet").value){
+  let allbus=  document.querySelectorAll('.busBox')
+  allbus.forEach((item)=>{
+   item.innerHTML=`<div class='text-[#E42E34] font-mono text-center text-[35px]'>Please Select the Date</div>`
+  }) 
+ }
+else{
+
+  let allbus=  document.querySelectorAll('.busBox')
+ allbus.forEach((item)=>{
+  item.innerHTML=`<div class='text-[#E42E34] font-mono text-center text-[35px]'>Sorry! There Is no Bus</div>`
+ }) 
+}
+
+
   if (fromBox.innerHTML === "Dhaka") {
     cost.innerHTML = 1100;
     costto.innerHTML = 1300;
@@ -64,19 +82,17 @@ setTimeout(() => {
     costto.innerHTML = 1500;
   }
 
+ document.querySelector('.items').classList.add('itemtop');
+  document.querySelector('.items').classList.add('itemTop');
+
 }, 3000);
 
   
-  // document.querySelector('.items').classList.add('itemsjh');
-  // document.querySelector('.items').classList.add('itemsjh');
-  // document.querySelector('.items').classList.remove('items');
+ 
+
 });
 
-// else{
-//   BusSearch.addEventListener('click',()=>{
 
-//   })
-// }
 
 // function starats while typing
 
