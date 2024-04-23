@@ -40,76 +40,60 @@ const datebox = document.querySelector(".selectdate");
 const buslist = document.querySelector(".buslist");
 
 BusSearch.addEventListener("click", () => {
-
-if(input.value==0&& input_to.value==0){
-  window.alert('Please Select Destination')
-}
-
-
-else{
-    if(document.querySelector(".datet").value==0){
- window.alert('Please select a date')
-  }
-
-  else{
-    document.querySelector('.loader').classList.add('load');
-searchDiv.classList.add("showBox");
-document.querySelector(".to_searchbox").classList.add("showBox");
-
-setTimeout(() => {
-  document.querySelector('.loader').classList.remove('load');
-
-  buslist.classList.toggle("block");
-  buslist.classList.remove("hidden");
-
-  if(fromBox.innerHTML!=toBox.innerHTML){
- fromOut.innerHTML = fromBox.innerText;
-  toOut.innerHTML = toBox.innerText;
-  let f = document.querySelector(".datet").value;
-  fromOutto.innerHTML = fromBox.innerText;
-  toOutto.innerHTML = toBox.innerText;
-
-  dateOut.innerHTML = f;
-  dateOutto.innerHTML = f;
-  }
- else if(fromBox.innerHTML!=toBox.innerHTML &&  datebox.innerHTML != document.querySelector(".datet").value){
-  let allbus=  document.querySelectorAll('.busBox')
-  allbus.forEach((item)=>{
-   item.innerHTML=`<div class='text-[#E42E34] font-mono text-center text-[35px]'>Please Select the Date</div>`
-  }) 
- }
-else{
-
-  let allbus=  document.querySelectorAll('.busBox')
- allbus.forEach((item)=>{
-  item.innerHTML=`<div class='text-[#E42E34] font-mono text-center text-[35px]'>Sorry! There Is no Bus</div>`
- }) 
-}
-
-
-  if (fromBox.innerHTML === "Dhaka") {
-    cost.innerHTML = 1100;
-    costto.innerHTML = 1300;
+  if (input.value == 0 && input_to.value == 0) {
+    window.alert("Please Select Destination");
   } else {
-    cost.innerHTML = 1200;
-    costto.innerHTML = 1500;
+    if (document.querySelector(".datet").value == 0) {
+      window.alert("Please select a date");
+    } else {
+      document.querySelector(".loader").classList.add("load");
+      searchDiv.classList.add("showBox");
+      document.querySelector(".to_searchbox").classList.add("showBox");
+
+      setTimeout(() => {
+        document.querySelector(".loader").classList.remove("load");
+
+        buslist.classList.toggle("block");
+        buslist.classList.remove("hidden");
+
+        if (fromBox.innerHTML != toBox.innerHTML) {
+          fromOut.innerHTML = fromBox.innerText;
+          toOut.innerHTML = toBox.innerText;
+          let f = document.querySelector(".datet").value;
+          fromOutto.innerHTML = fromBox.innerText;
+          toOutto.innerHTML = toBox.innerText;
+
+          dateOut.innerHTML = f;
+          dateOutto.innerHTML = f;
+        } else if (
+          fromBox.innerHTML != toBox.innerHTML &&
+          datebox.innerHTML != document.querySelector(".datet").value
+        ) {
+          let allbus = document.querySelectorAll(".busBox");
+          allbus.forEach((item) => {
+            item.innerHTML = `<div class='text-[#E42E34] font-mono text-center text-[35px]'>Please Select the Date</div>`;
+          });
+        } else {
+          let allbus = document.querySelectorAll(".busBox");
+          allbus.forEach((item) => {
+            item.innerHTML = `<div class='text-[#E42E34] font-mono text-center text-[35px]'>Sorry! There Is no Bus</div>`;
+          });
+        }
+
+        if (fromBox.innerHTML === "Dhaka") {
+          cost.innerHTML = 1100;
+          costto.innerHTML = 1300;
+        } else {
+          cost.innerHTML = 1200;
+          costto.innerHTML = 1500;
+        }
+
+        document.querySelector(".items").classList.add("itemtop");
+        document.querySelector(".items").classList.add("itemTop");
+      }, 3000);
+    }
   }
-
- document.querySelector('.items').classList.add('itemtop');
-  document.querySelector('.items').classList.add('itemTop');
-
-}, 3000);
-
-  }
-
-}
-
-  
- 
-
 });
-
-
 
 // function starats while typing
 
@@ -238,12 +222,6 @@ function boxhiddentwo() {
 function faka() {
   input.value = "";
   fromBox.innerHTML = "Please select";
-  reset();
-}
-
-function fakato() {
-  input.value = "";
-  toBox.innerHTML = "Please select";
   reset();
 }
 function swit() {
