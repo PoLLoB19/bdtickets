@@ -240,6 +240,12 @@ function faka() {
   fromBox.innerHTML = "Please select";
   reset();
 }
+
+function fakato() {
+  input.value = "";
+  toBox.innerHTML = "Please select";
+  reset();
+}
 function swit() {
   if (fromBox.innerHTML !== input_to.value && toBox.innerHTML !== input.value) {
     fromBox.innerHTML = input_to.value;
